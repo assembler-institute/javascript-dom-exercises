@@ -63,8 +63,15 @@
        *
        * Add the event listener and finish the code of the function
        */
+      let container = document.querySelector(".list-container");
 
-      function removeItem(event) {}
+      container.addEventListener("click", removeItem);
+
+      function removeItem(event) {
+        if (event.target.matches(".weekday-item")) {
+          event.target.remove();
+        }
+      }
     </script>
     <script src="./__tests__/exercise-09.js"></script>
   </body>

@@ -51,8 +51,14 @@
       /**
        * JavaScript Exercises - 18
        *
-       * Add the event listener
+       * Add the event listener and finish the code of the function
        */
+
+      let button = document.querySelector("#toggle_classes");
+
+      button.addEventListener("click", () => {
+        button.classList.toggle("hovered");
+      });
     </script>
     <script src="./__tests__/exercise-18.js"></script>
   </body>

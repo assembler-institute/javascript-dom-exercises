@@ -46,12 +46,8 @@
     </div>
     <div>
       <hr />
-      <!--  -->
-      <!-- JavaScript Exercises - 10 -->
-      <!--  -->
-      <!-- Add the inline `onclick` event listener ⬇️ -->
-      <!--  -->
-      <button id="add_elements">
+      <!-- Add the inline `onclick` event listener -->
+      <button id="add_elements" onclick="addElements()">
         Add new elements
       </button>
       <div class="ex-wrapper">
@@ -68,7 +64,20 @@
        *
        * Finish the code of the function
        */
-      function addElements() {}
+      function addElements() {
+        let container = document.querySelector(".list-container");
+
+        let li_1 = document.createElement("li");
+        let li_2 = document.createElement("li");
+
+        li_1.textContent = "Thursday";
+        li_2.textContent = "Friday";
+
+        li_1.className = "weekday-item";
+        li_2.className = "weekday-item";
+
+        container.append(li_1, li_2);
+      }
     </script>
     <script src="./__tests__/exercise-10.js"></script>
   </body>

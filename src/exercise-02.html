@@ -61,7 +61,14 @@
        *
        * Finish the code of the function
        */
-      function changeTextContent() {}
+      function changeTextContent() {
+        let spans = document.getElementsByTagName("span");
+
+        for (let span of spans) {
+          span.textContent += " changed";
+          span.style.color = "blue";
+        }
+      }
 
       /**
        * JavaScript Exercises - 02

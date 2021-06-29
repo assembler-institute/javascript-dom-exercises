@@ -53,8 +53,18 @@
       /**
        * JavaScript Exercises - 17
        *
-       * Add the event listeners
+       * Add the event listeners and finish the code of the function
        */
+
+      let button = document.querySelector("#change_classes");
+
+      button.addEventListener("mouseover", function onMouseOver() {
+        button.className = "hovered";
+      });
+
+      button.addEventListener("mouseout", function onMouseOut() {
+        button.className = "";
+      });
     </script>
     <script src="./__tests__/exercise-17.js"></script>
   </body>

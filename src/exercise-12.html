@@ -75,7 +75,22 @@
        * Add the event listener and finish the code of the function
        */
 
-      function addElement() {}
+      let button = document.querySelector("#add_element");
+
+      button.addEventListener("click", addElement);
+
+      function addElement() {
+        let container = document.querySelector(".list-container");
+
+        if (!container.firstElementChild.textContent.includes("Monday")) {
+          let li = document.createElement("li");
+
+          li.textContent = "Monday";
+          li.className = "weekday-item";
+
+          container.insertBefore(li, container.firstElementChild);
+        }
+      }
     </script>
     <script src="./__tests__/exercise-12.js"></script>
   </body>

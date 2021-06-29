@@ -66,7 +66,21 @@
        * Add the event listener and finish the code of the function
        */
 
-      function replaceElement() {}
+      let button = document.querySelector("#replace_element");
+
+      button.addEventListener("click", replaceElement);
+
+      function replaceElement() {
+        let prevList = document.querySelector(".list-container");
+
+        let li = document.createElement("li");
+
+        li.className = "weekday-item";
+        li.textContent = "REPLACED";
+        li.style.color = "red";
+
+        prevList.replaceChild(li, prevList.children[1]);
+      }
     </script>
     <script src="./__tests__/exercise-16.js"></script>
   </body>

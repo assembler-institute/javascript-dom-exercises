@@ -63,8 +63,31 @@
        * Add the event listener and finish the code of the function
        */
 
+      let button = document.querySelector("#add_list");
+
+      button.addEventListener("click", addList);
+
       function addList() {
         let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+        let container = document.querySelector(".ex-wrapper");
+
+        if (container.childElementCount === 0) {
+          let ul = document.createElement("ul");
+
+          ul.className = "list-container";
+
+          days.forEach((day) => {
+            let li = document.createElement("li");
+
+            li.className = "weekday-item";
+            li.textContent = day;
+
+            ul.append(li);
+          });
+
+          container.append(ul);
+        }
       }
     </script>
     <script src="./__tests__/exercise-14.js"></script>

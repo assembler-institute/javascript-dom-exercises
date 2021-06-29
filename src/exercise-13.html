@@ -60,7 +60,20 @@
        * Add the event listener and finish the code of the function
        */
 
-      function addHTML() {}
+      let button = document.querySelector("#add_element");
+
+      button.addEventListener("click", addHTML);
+
+      function addHTML() {
+        let container = document.querySelector(".list-container");
+
+        if (!container.firstElementChild.textContent.includes("Monday")) {
+          container.insertAdjacentHTML(
+            "afterbegin",
+            '<li class="weekday-item">Monday</li>'
+          );
+        }
+      }
     </script>
     <script src="./__tests__/exercise-13.js"></script>
   </body>

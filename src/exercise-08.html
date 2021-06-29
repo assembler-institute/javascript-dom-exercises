@@ -59,12 +59,26 @@
        * to execute the `addNewElement` function when it is clicked
        */
 
+      let button = document.getElementById("add-new");
+      button.addEventListener("click", addNewElement);
+
       /**
        * JavaScript Exercises - 08
        *
        * Finish the code of the function
        */
-      function addNewElement() {}
+      function addNewElement() {
+        let container = document.querySelector(".list-container");
+
+        if (!container.lastElementChild.textContent.includes("Friday")) {
+          let li = document.createElement("li");
+
+          li.textContent = "Friday";
+          li.className = "weekday-item";
+
+          container.appendChild(li);
+        }
+      }
     </script>
     <script src="./__tests__/exercise-08.js"></script>
   </body>

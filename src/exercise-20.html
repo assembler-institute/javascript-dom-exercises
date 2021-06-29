@@ -87,8 +87,21 @@
        *
        * Add the event listener and finish the code of the function
        */
+      let btn = document.getElementById("add_last_names");
 
-      function addLastNames() {}
+      btn.addEventListener("click", addLastNames);
+
+      function addLastNames() {
+        let list = document.querySelector(".list-container");
+
+        for (let li of list.children) {
+          let lastname = li.getAttribute("data-lastname");
+
+          li.textContent = li.textContent + " " + lastname;
+
+          li.removeAttribute("data-lastname");
+        }
+      }
     </script>
     <script src="./__tests__/exercise-20.js"></script>
   </body>

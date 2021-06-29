@@ -73,9 +73,17 @@
        *
        * Finish the code of the functions
        */
-      function removeFirstElement() {}
+      function removeFirstElement() {
+        let container = document.querySelector(".list-container");
 
-      function removeLastElement() {}
+        container.firstElementChild.remove();
+      }
+
+      function removeLastElement() {
+        let container = document.querySelector(".list-container");
+
+        container.lastElementChild.remove();
+      }
     </script>
     <script src="./__tests__/exercise-07.js"></script>
   </body>

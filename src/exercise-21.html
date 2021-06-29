@@ -91,8 +91,25 @@
        *
        * Add the event listeners and finish the code of the function
        */
+      let form = document.getElementById("contact-form");
 
-      function handleSubmit(event) {}
+      form.addEventListener("submit", handleSubmit);
+
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        let p_1 = document.createElement("p");
+        let p_2 = document.createElement("p");
+
+        let firstName = event.target.elements.firstName.value;
+        let lastName = event.target.elements.lastName.value;
+        let email = event.target.elements.email.value;
+
+        p_1.textContent = "Name: " + firstName + " " + lastName;
+        p_2.textContent = "Email: " + email;
+
+        event.target.append(p_1, p_2);
+      }
     </script>
     <script src="./__tests__/exercise-21.js"></script>
   </body>
